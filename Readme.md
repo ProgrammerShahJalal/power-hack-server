@@ -1,8 +1,8 @@
 # Power Hack Server
 
-Live Site Link: https://teamlance-58135.web.app/
+Live Site Link: https://power-hack-612cc.web.app/
 <br/>
-Server Site Link: https://teamlance-server.onrender.com/
+Server Site Link: https://power-hack-server-yq09.onrender.com/
 
 ## What I do in this project
 <b><blockquote> Programming Technology</blockquote></b>
@@ -18,7 +18,7 @@ Server Site Link: https://teamlance-server.onrender.com/
 <li>Animation of data fetching</li>
 <li>Private Route</li>
 <li>Authenticated Login-Registration</li>
-<li>Heroku Server Hosting</li>
+<li>Render Server Hosting</li>
 <li>Conditional Rendering</li>
 <li>React Hook Form</li>
 <li>CURD Operation</li>
