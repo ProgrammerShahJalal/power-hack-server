@@ -88,7 +88,6 @@ async function run() {
       const options = { upsert: true };
       const updateDoc = {
         $set: {
-          billingId: updatedBill?.billingId,
           name: updatedBill?.name,
           email: updatedBill?.email,
           phone: updatedBill?.phone,
@@ -103,7 +102,7 @@ async function run() {
       res.json(result);
     });
 
-    // DELETE API FOR A PRODUCT
+    // DELETE API FOR A Bill
     app.delete("/delete-billing/:id", async (req, res) => {
       const id = req.params.id;
       const query = { _id: ObjectId(id) };
@@ -165,6 +164,20 @@ async function run() {
   });
 
 
+    // GET SINGLE BILLING API
+    app.get('/billing-list/:id', async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: ObjectId(id) }
+      const product = await billingCollection.findOne(query);
+      res.json(product);
+  })
+    // GET SINGLE UPDATE BILLING API
+    app.get('/update-billing/:id', async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: ObjectId(id) }
+      const product = await billingCollection.findOne(query);
+      res.json(product);
+  })
     // GET LOGIN API
     app.get("/login", async (req, res) => {
       const cursor = loginCollection.find({});
